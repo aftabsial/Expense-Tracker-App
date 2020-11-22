@@ -26,8 +26,9 @@ jobs:
       - name: install Yarn
         run: sudo apt update && sudo apt install yarn
       - name: install npm
-        run: npm install 
-      - name: "CI= npm run build"
+        run: npm install
+        CI: "" 
+      - name: npm run build
         run: yarn build
       - name: install Surge
         run: npm install -g surge
