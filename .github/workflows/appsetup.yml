@@ -26,11 +26,10 @@ jobs:
       - name: install Yarn
         run: sudo apt update && sudo apt install yarn
       - name: install npm
-        run: npm install
-        CI: "" 
+        run: npm install 
       - name: npm run build
         run: yarn build
       - name: install Surge
         run: npm install -g surge
       - name: Run Surge
-        run: surge ./build  http://wiry-riddle.surge.sh/ --token ${{secrets.SURGE_TOKEN}} 
+        run: surge ./build  http://seemly-wilderness.surge.sh/ --token ${{secrets.SURGE_TOKEN}} 
